@@ -1,0 +1,242 @@
+#main {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+#left-btns {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.dp img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin: 10px;
+}
+
+#mainstuff {
+    display: flex;
+    /* gap: 200px; */
+}
+
+#cards {
+    margin: 30px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 18px gray;
+    height: 255px;
+    width: 300px;
+    position: relative;
+}
+
+.kaam {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 20px 10px 10px 10px;
+}
+
+.loc {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 2px 10px 10px 10px;
+}
+
+.name {
+    font-size: large;
+    font-weight: bolder;
+    margin: 2px 0px 20px 10px;
+}
+
+.phone {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 10px;
+    margin: 20px 0px 0px 10px;
+}
+
+.call {
+    color: white;
+    border-radius: 15px;
+    background-color: black;
+    height: 35px;
+    width: 70px;
+    font-size: larger;
+    text-align: center;
+    box-shadow: 5px 3.5px 18px gray;
+}
+
+.message {
+    color: black;
+    background-color: white;
+    border-radius: 15px;
+    height: 35px;
+    width: 100px;
+    font-size: large;
+    text-align: center;
+    box-shadow: 5px 3.5px 18px gray;
+}
+
+#addbtn,
+#upbtn,
+#dwnbtn {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+}
+
+#addbtn i,
+#upbtn i,
+#dwnbtn i {
+    font-size: 30px;
+    color: black;
+}
+
+/* All cards */
+#cards > .card {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: white;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+}
+
+/* First card */
+#cards > .card:nth-child(1) {
+    z-index: 3;
+}
+
+/* Second card */
+#cards > .card:nth-child(2) {
+    z-index: 2;
+    transform: translateY(12px) scale(0.98);
+}
+
+/* Third card */
+#cards > .card:nth-child(3) {
+    z-index: 1;
+    transform: translateY(24px) scale(0.96);
+}
+
+/* form css */
+#contact-form {
+    width: 380px;
+    padding: 25px;
+    border-radius: 15px;
+    background-color: white;
+    box-shadow: 5px 5px 18px gray;
+    position: absolute;
+    bottom: 0px;
+    z-index: 5;
+    left: 23%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+#contact-form.show{
+    display: none;
+}
+
+#contact-form label {
+    font-size: 14px;
+    font-weight: bold;
+}
+
+#contact-form input[type="url"],
+#contact-form input[type="text"] {
+    height: 35px;
+    padding: 0 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    outline: none;
+    font-size: 14px;
+}
+
+#contact-form input[type="url"]:focus,
+#contact-form input[type="text"]:focus {
+    border: 1px solid black;
+}
+
+#contact-form p {
+    margin: 10px 0 0 0;
+    font-weight: bold;
+}
+
+/* Radio buttons */
+#contact-form label:has(input[type="radio"]) {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: normal;
+}
+
+#contact-form input[type="radio"] {
+    cursor: pointer;
+}
+
+/* Submit button */
+#contact-form button {
+    margin-top: 10px;
+    height: 40px;
+    border: none;
+    border-radius: 18px;
+    background-color: black;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+#contact-form button:hover {
+    opacity: 0.8;
+}
+.form-buttons {
+    display: flex;
+    gap: 10px;
+    margin-top: 15px;
+    flex-direction: column;
+}
+
+.form-buttons button {
+    /* flex: 1; */
+    height: 40px;
+    /* border-radius: 20px; */
+    font-size: 15px;
+    cursor: pointer;
+}
+
+#create-note {
+    background-color: black;
+    color: white;
+    border: none;
+}
+
+#close-form {
+    background-color: white;
+    color: black;
+    border: 1px solid #ccc;
+}
+@keyframes press {
+    0% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.7;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.cards-press {
+    animation: press 200ms ease;
+}
